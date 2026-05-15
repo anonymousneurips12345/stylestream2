@@ -28,6 +28,14 @@
   </div>
 </section>
 
+<section class="section figure-section">
+  <div class="container is-max-widescreen">
+    <figure class="system-figure">
+      <img src="./static/images/stylizer-voice-controller.png" alt="StyleStream 2.0 system overview">
+    </figure>
+  </div>
+</section>
+
 <section class="section">
   <div class="container is-max-desktop">
     <div class="columns is-centered has-text-centered">
@@ -39,22 +47,23 @@
             the timbre, accent, and emotion of a target voice while preserving linguistic
             content. StyleStream 1.0 introduced the first streamable zero-shot VSC system
             with state-of-the-art conversion quality, but remained limited in two ways:
-            approximately one-second end-to-end latency on consumer hardware, and the lack
-            of a text-based interface for designing or editing target voices. We present
+            approximately 1s end-to-end latency on consumer hardware, and the lack of a
+            text-based interface for designing or editing target voices. We present
             StyleStream 2.0, a fast and controllable streaming VSC framework that addresses
             these limitations. To reduce latency, we train a few-step pixel MeanFlow model
             and further fine-tune it with autoregressive feedback inspired by Self Forcing,
             improving robustness under streaming inference. This reduces end-to-end latency
-            to approximately 510 ms on a consumer GPU, a 2x speedup over StyleStream 1.0,
-            while maintaining conversion quality. To enable controllable style manipulation,
-            we remove the mel-spectrogram context and instead route target style information
-            through a compact style embedding. In this embedding space, we train a unified
+            to 520 ms on a consumer GPU, a 2x speedup over StyleStream 1.0, while maintaining
+            conversion quality. To enable controllable style manipulation, we remove the
+            mel-spectrogram context and instead route target style information through a
+            compact style embedding. In this embedding space, we train a unified
             text-conditioned flow matching model that supports both text-based voice design,
             which maps natural language prompts to voice styles, and instruction-based voice
             editing, which modifies a specific attribute of a source utterance while preserving
             the rest. Experiments show that StyleStream 2.0 achieves the strongest target
             style fidelity on VSC, voice design, and voice editing, while remaining competitive
-            on intelligibility and non-edited attribute preservation.
+            on intelligibility and non-edited attribute preservation. Samples can be found
+            here: <a href="https://anonymousneurips12345.github.io/stylestream2/">https://anonymousneurips12345.github.io/stylestream2/</a>.
           </p>
         </div>
       </div>
@@ -62,15 +71,14 @@
   </div>
 </section>
 
-<!-- Video Demo Section
-<section class="section">
+<section id="video-demo" class="section">
   <div class="container is-max-desktop">
     <div class="columns is-centered has-text-centered">
       <div class="column is-four-fifths">
         <h2 class="title is-3">Video Demo</h2>
         <div class="content">
-          <video controls style="width: 100%; max-width: 800px;">
-            <source src="./static/video/StyleStream_Video_Demo.mp4" type="video/mp4">
+          <video class="demo-video" controls preload="metadata">
+            <source src="./static/video/StyleStream2.0_Video_Demo.mp4" type="video/mp4">
             Your browser does not support the video tag.
           </video>
         </div>
@@ -78,7 +86,6 @@
     </div>
   </div>
 </section>
--->
 
 <section id="voice-style-conversion" class="section">
   <div style="width: 100%; max-width: none; padding: 0 20px;">

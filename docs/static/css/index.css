@@ -71,6 +71,32 @@ body {
   display: inline-block;
 }
 
+.figure-section {
+  padding-bottom: 1rem;
+  padding-top: 1rem;
+}
+
+.system-figure {
+  margin: 0 auto;
+  text-align: center;
+}
+
+.system-figure img {
+  display: block;
+  height: auto;
+  margin: 0 auto;
+  max-width: 1120px;
+  width: 100%;
+}
+
+.demo-video {
+  display: block;
+  height: auto;
+  margin: 0 auto;
+  max-width: 900px;
+  width: 100%;
+}
+
 .publication-video {
   border-radius: 10px !important;
   height: 0;
